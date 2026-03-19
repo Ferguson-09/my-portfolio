@@ -7,7 +7,7 @@
 
 body {
     min-height: 100svh;
-    background-image: url(../media/hero-banner\ comp.jpg);
+    background-image: url(../media/hero-banner-comp.jpg);
     background-repeat: repeat-y;
     background-size: cover;
     background-position: center;  
@@ -25,6 +25,11 @@ header {
     place-items: center;
     font-size: 30px;
     opacity: 0.7;
+    transition: 0.5s ease-in-out;
+}
+
+header:hover {
+    transform: translateY(-20px);
 }
 
 .about-div {
@@ -34,6 +39,7 @@ header {
 }
 
 .profile-pic {
+    height: 400px;
     border-radius: 50%;
     margin-right: 50px;
 }
@@ -54,6 +60,7 @@ header {
 }
 
 .contact-heading {
+    display: inline-block;
     text-align: center;
     font-size: 25px;
     opacity: 0.9;
@@ -73,8 +80,72 @@ header {
     color: rgb(53, 135, 179);
 }
 
-.email-icon {
-    border-radius: 50%;
-    height: 300px;
-    margin-top: 30px
+footer {
+    background-color: rgb(81, 41, 200);
+    margin-top: 50px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-txt {
+    margin-left: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.footer-btn {
+    margin-right: 30px;
+    height: 50px;
+    width: 150px;
+    opacity: 0.9;
+}
+
+.footer-btn:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+    .about-content {
+        display: grid;
+    }
+    .profile-pic {
+        margin: auto;
+    }
+}
+
+@media (max-width: 750px) {
+    .footer-txt {
+        font-size: 30px;
+    }
+    .contact-list {
+        display: grid;
+    }
+    .contact-pic {
+        margin: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-txt {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 530px) {
+    .footer-txt{
+        font-size: 20px;
+    }
+    .profile-pic {
+        height: auto;
+        width: 300px;
+    }
+    .contact-pic {
+        height: auto;
+        width: 300px;
+        margin: auto;
+    }
 }
